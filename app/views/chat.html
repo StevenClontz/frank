@@ -1,8 +1,14 @@
 <div ng-controller="ChatCtrl">
-  <p>
-    <a ng-click="scrollToLight()">Light a Candle</a>
+  <p class="text-center">
+    <a class="btn btn-default"
+       ng-click="scrollToLight()">
+      Light a Candle
+    </a>
   </p>
   <h2>Remembering Frank</h2>
+  <div ng-show="!hideLoading" class="text-muted">
+    Loading...
+  </div>
   <div id="messages" ng-show="messages.length">
     <div class="panel panel-default"
          ng-repeat="message in messages | orderBy:'name'">

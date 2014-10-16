@@ -12,8 +12,8 @@ angular.module('frankApp')
     // synchronize a read-only, synchronized array of messages
     $scope.messages = fbutil.syncArray('messages');
 
-    // display any errors
-    $scope.messages.$loaded().catch(alert);
+    // hide loading message; display any errors
+    $scope.messages.$loaded().then(hideLoadingMessage).catch(alert);
 
     function resetMessage() {
       $scope.newMessage = {
@@ -22,6 +22,10 @@ angular.module('frankApp')
         affiliation: '',
         text: ''
       };
+    }
+
+    function hideLoadingMessage() {
+      $scope.hideLoading = true;
     }
 
     resetMessage();
