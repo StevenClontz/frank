@@ -8,7 +8,7 @@
  * adapted for virtual candle lighting functionality
  */
 angular.module('frankApp')
-  .controller('ChatCtrl', function ($scope, fbutil, $timeout) {
+  .controller('ChatCtrl', function ($scope, fbutil, $timeout, $location, $anchorScroll) {
     // synchronize a read-only, synchronized array of messages
     $scope.messages = fbutil.syncArray('messages');
 
@@ -44,4 +44,13 @@ angular.module('frankApp')
         $scope.err = null;
       }, 5000);
     }
+
+    $scope.scrollToLight = function() {
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      $location.hash('light');
+
+      // call $anchorScroll()
+      $anchorScroll();
+    };
   });

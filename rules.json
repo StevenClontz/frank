@@ -1,0 +1,12 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": false,
+    "messages": {
+      "$message": {
+        ".write":  "!data.exists()",
+        ".validate": "newData.child('name').exists()"
+      }
+    }
+  }
+}

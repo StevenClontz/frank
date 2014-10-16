@@ -1,4 +1,8 @@
 <div ng-controller="ChatCtrl">
+  <p>
+    <a ng-click="scrollToLight()">Light a Candle</a>
+  </p>
+  <h2>Remembering Frank</h2>
   <div id="messages" ng-show="messages.length">
     <div class="panel panel-default"
          ng-repeat="message in messages | orderBy:'name'">
@@ -23,7 +27,9 @@
     </div>
   </div>
 
-  <h2>Light a Candle</h2>
+  <hr/>
+
+  <h2 id="light">Light a Candle</h2>
 
   <form role="form"
         ng-submit="addMessage(newMessage)">
@@ -77,6 +83,6 @@
   </form>
 
   <p class="alert alert-warning" ng-show="err">
-    There was an error: {{err}}
+    There was an error: {{err.code}}
   </p>
 </div>
