@@ -8,7 +8,7 @@
  * adapted for virtual candle lighting functionality
  */
 angular.module('frankApp')
-  .controller('ChatCtrl', function ($scope, fbutil, $timeout, $location, $anchorScroll) {
+  .controller('MainCtrl', function ($scope, fbutil, $timeout, $location, $anchorScroll) {
     // synchronize a read-only, synchronized array of messages
     $scope.messages = fbutil.syncArray('messages');
 
