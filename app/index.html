@@ -22,18 +22,18 @@
     <!-- Add your site or application content here -->
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <!-- //angularfire -->
-          <li><a ng-href="#">link</a></li>
-          </ul>
-        <h3 class="text-muted">frank</h3>
+        <h3 class="text-muted">Frank Sturm</h3>
       </div>
 
-      <div ng-include="'views/chat.html'" ng-controller="ChatCtrl"></div>
+      <div ng-include="'views/chat.html'"></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>
+          <small>
+            Contact <a href="mailto:steven.clontz@gmail.com">Steven</a> with any
+            questions/issues about this page.
+          </small>
+        </p>
       </div>
     </div>
 
@@ -82,7 +82,6 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
         <script src="scripts/angularfire/config.js"></script>
         <script src="scripts/angularfire/firebase.utils.js"></script>
         <script src="scripts/controllers/chat.js"></script>
