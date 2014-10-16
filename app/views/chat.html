@@ -29,29 +29,39 @@
         <div class="panel panel-default"
              ng-repeat="message in messages | orderBy:'name'">
           <div class="panel-body">
-            <p>
-              <strong>
-                {{message.name}}
-              </strong>
-              <span ng-if="message.affiliation">
-                &mdash; {{message.affiliation}}
-              </span>
-              <small ng-if="message.email">
-                <a ng-href="mailto:{{message.email}}">
-                  [email]
-                </a>
-              </small>
-            </p>
-            <p ng-if="message.text">
-              {{message.text}}
-            </p>
+            <div class="row">
+              <div class="col-sm-10">
+                <p>
+                  <strong>
+                    {{message.name}}
+                  </strong>
+                  <span ng-if="message.affiliation">
+                    &mdash; {{message.affiliation}}
+                  </span>
+                  <small ng-if="message.email">
+                    <a ng-href="mailto:{{message.email}}">
+                      [email]
+                    </a>
+                  </small>
+                </p>
+                <p ng-if="message.text">
+                  {{message.text}}
+                </p>
+              </div>
+              <div class="col-sm-2 text-center">
+                <img src="images/teaLight.jpg" height="80px" width="80px">
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <hr/>
+      <div class="vspace"></div>
 
-      <h3 id="light">Light a Candle</h3>
+      <h3 id="light">
+        Light a Candle
+        <img src="images/teaLight.jpg" height="35px" width="35px">
+      </h3>
 
       <form role="form"
             ng-submit="addMessage(newMessage)">
